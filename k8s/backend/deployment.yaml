@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: media-backend
+  namespace: media-prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: media-backend
+  template:
+    metadata:
+      labels:
+        app: media-backend
+    spec:
+      containers:
+        - name: backend
+          image: nginx:stable
+          ports:
+            - containerPort: 80

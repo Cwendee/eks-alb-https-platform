@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: media-frontend
+  namespace: media-prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: media-frontend
+  template:
+    metadata:
+      labels:
+        app: media-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: nginx:stable
+          ports:
+            - containerPort: 80

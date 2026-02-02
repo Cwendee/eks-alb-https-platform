@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: media-frontend-html
+  namespace: media-prod
+data:
+  index.html: |

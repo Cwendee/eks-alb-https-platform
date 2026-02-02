@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Platform</title>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      text-align: center;
+      padding-top: 80px;
+    }
+    h1 { font-size: 2.5rem; }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #38bdf8;
+    }
+    pre {
+      margin-top: 30px;
+      background: #020617;
+      padding: 16px;
+      border-radius: 8px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 Media Platform</h1>
+  <p>Frontend running on EKS with ALB Ingress + HTTPS</p>
+
+  <button onclick="loadBackend()">Call Backend API</button>
+
+  <pre id="output">Waiting for response...</pre>
+
+  <script>
+    async function loadBackend() {
+      const res = await fetch("/api");
+      const data = await res.text();
+      document.getElementById("output").textContent = data;
+    }
+  </script>
+
+</body>
+</html>
