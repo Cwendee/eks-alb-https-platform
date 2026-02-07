@@ -1,14 +1,6 @@
 # Terraform
-.terraform/
+**/.terraform/
 *.tfstate
-*.tfstate.*
-terraform/.terraform/
-terraform/.terraform.lock.hcl
-
-# Terraform variables (may contain secrets)
-terraform.tfvars
+*.tfstate.backup
 *.tfvars
-
-# OS / editor noise
-.DS_Store
-.vscode/
+.terraform.lock.hcl
