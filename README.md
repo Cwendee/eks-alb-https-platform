@@ -15,8 +15,8 @@ A containerized **Next.js frontend application** is deployed behind an **interne
 
 ## 🏗️ Architecture Overview
 
-- **Infrastructure as Code**: Terraform
-- **Kubernetes**: Amazon EKS
+- **Infrastructure as Code**: Terraform  
+- **Kubernetes**: Amazon EKS  
 - **Networking**:
   - VPC with public & private subnets
   - Application Load Balancer (ALB)
@@ -34,45 +34,37 @@ A containerized **Next.js frontend application** is deployed behind an **interne
 
 ---
 
-```md
-
 ## 🧱 Project Structure
 
 The repository is organized to clearly separate infrastructure, Kubernetes manifests, and application code:
 
-# eks-multitier-terraform
-
-```
-
+```md
 eks-alb-https-platform/
 ├── terraform/
-│ ├── vpc/
-│ ├── eks/
-│ ├── node-groups/
-│ ├── alb-controller/
-│ └── main.tf
+│   ├── vpc/
+│   ├── eks/
+│   ├── node-groups/
+│   ├── alb-controller/
+│   └── main.tf
 │
 ├── k8s/
-│ └── media-prod/
-│ ├── namespace.yaml
-│ ├── ingress.yaml
-│ └── frontend/
-│ ├── media-frontend-deployment.yaml
-│ ├── service.yaml
-│ └── configmap.yaml
+│   └── media-prod/
+│       ├── namespace.yaml
+│       ├── ingress.yaml
+│       └── frontend/
+│           ├── media-frontend-deployment.yaml
+│           ├── service.yaml
+│           └── configmap.yaml
 │
 ├── frontend/
-│ └── media-frontend/
-│ ├── Dockerfile
-│ ├── package.json
-│ ├── next.config.js
-│ └── app/
+│   └── media-frontend/
+│       ├── Dockerfile
+│       ├── package.json
+│       ├── next.config.js
+│       └── app/
 │
 └── README.md
 
-```
-
----
 
 ## 🚀 Deployment Flow
 
