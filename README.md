@@ -42,7 +42,7 @@ The repository is organized to clearly separate infrastructure, Kubernetes manif
 
 # eks-multitier-terraform
 
-```text
+```
 
 eks-alb-https-platform/
 ├── terraform/
@@ -70,6 +70,7 @@ eks-alb-https-platform/
 │
 └── README.md
 
+```
 
 ---
 
