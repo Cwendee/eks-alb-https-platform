@@ -15,6 +15,8 @@ A containerized **Next.js frontend application** is deployed behind an **interne
 
 ## 🏗️ Architecture Overview
 
+![EKS ALB HTTPS Architecture](images/production-eks-architecture.png)
+
 - **Infrastructure as Code**: Terraform  
 - **Kubernetes**: Amazon EKS  
 - **Networking**:
@@ -31,6 +33,19 @@ A containerized **Next.js frontend application** is deployed behind an **interne
   - Next.js frontend
   - Containerized with Docker
   - Image stored in Amazon ECR
+
+---
+
+🤔 Why This Architecture?
+
+Separation of concerns
+Infrastructure provisioning (Terraform), cluster operations (Kubernetes), and application delivery (Next.js) are clearly isolated, improving maintainability and scalability.
+
+Security-first design
+IAM Roles for Service Accounts (IRSA) eliminate static credentials, while HTTPS termination at the ALB ensures encrypted traffic from the edge.
+
+Production realism
+Using AWS Load Balancer Controller, ACM, and ECR mirrors real-world enterprise EKS deployments rather than simplified demos.
 
 ---
 
@@ -119,12 +134,33 @@ Each issue reinforced real-world troubleshooting skills across IAM, Kubernetes, 
 
 ---
 
-## 🧪 Validation Evidence
+## 📸 Validation & Evidence
+
+The following screenshots serve as verifiable evidence of the deployed infrastructure, security configuration, and application availability during the project’s active lifecycle.
+They demonstrate that the platform was successfully provisioned, secured, and exposed over HTTPS using production-grade AWS and Kubernetes components.
 
 - HTTPS verified with `curl -I https://media.pruddieverse.com`
-- ALB health checks passing
-- Kubernetes pods running and serving traffic
-- Screenshots captured for portfolio documentation
+
+## 🔐 ACM Certificate Validation
+
+![ACM Certificate](images/acmcert.png)
+
+## 🌍 Live Application (During Deployment)
+
+![Live Application](images/liveapp.png)
+
+## 🌍 Live Application (During Deployment)
+
+![Live Application](images/liveapp.png)
+
+## 🎯 Target Group Configuration
+
+![Target Group Ports](images/tgports.png)
+
+## 🗄️ Terraform Remote State
+
+![Terraform State](images/terraform-state.png)
+
 
 ---
 
