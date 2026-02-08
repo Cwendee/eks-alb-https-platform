@@ -38,7 +38,7 @@ A containerized **Next.js frontend application** is deployed behind an **interne
 
 The repository is organized to clearly separate infrastructure, Kubernetes manifests, and application code:
 
-```md
+```
 eks-alb-https-platform/
 ├── terraform/
 │   ├── vpc/
@@ -64,6 +64,7 @@ eks-alb-https-platform/
 │       └── app/
 │
 └── README.md
+```
 
 ---
 
