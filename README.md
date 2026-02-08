@@ -34,9 +34,15 @@ A containerized **Next.js frontend application** is deployed behind an **interne
 
 ---
 
+```md
+
 ## 🧱 Project Structure
 
+The repository is organized to clearly separate infrastructure, Kubernetes manifests, and application code:
+
 # eks-multitier-terraform
+
+```text
 
 eks-alb-https-platform/
 ├── terraform/
