@@ -148,10 +148,7 @@ They demonstrate that the platform was successfully provisioned, secured, and ex
 ## 🌍 Live Application (During Deployment)
 
 ![Live Application](images/liveapp.png)
-
-## 🌍 Live Application (During Deployment)
-
-![Live Application](images/liveapp.png)
+)
 
 ## 🎯 Target Group Configuration
 
