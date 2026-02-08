@@ -65,7 +65,7 @@ eks-alb-https-platform/
 │
 └── README.md
 
-```md
+---
 
 
 ## 🚀 Deployment Flow
